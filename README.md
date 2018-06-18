@@ -1,2 +1,2 @@
 # iamluark.github.io
-My static page: http://iamluark.github.io
+My React Portfolio Page: http://iamluark.github.io

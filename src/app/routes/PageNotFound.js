@@ -1,17 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { browserHistory } from 'react-router';
 
-const propTypes = {
-    location: PropTypes.object.isRequired,
-};
+const PageNotFound = () => (
+    <div className="PageNotFound">
+        <h1>Page Not Found</h1>
+        <div
+            className='button'
+            onClick={() => browserHistory.push(`${process.env.PUBLIC_URL}/`)}
+        >
+            Home
+    </div>
+    </div>
+);
 
-export default function PageNotFound() {
-    return (
-        <p>
-            Page not found - the path, No Code,
-            did not match any React Router routes.
-    </p>
-    );
-}
-
-PageNotFound.propTypes = propTypes;
+export default PageNotFound;

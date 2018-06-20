@@ -1,25 +1,25 @@
+/**
+ * Using react-router@3.0.2
+ */
 import React from 'react';
-import { Router, Route, Switch } from 'react-router';
-import { HashRouter } from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
+import { browserHistory, Route, Router } from 'react-router';
+import App from './App';
+import { Page404 } from './pages';
 
-const history = createBrowserHistory();
+/**
+ * Utilize process.env.PUBLIC_URL that is exposed by create-react-app internally:
+ * See: https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/config/env.js
+ * By prefixing the root path with process.env.PUBLIC_URL the root path will now match your Github specific url:
+ * process.env.PUBLIC_URL + '/' === https://<username>.github.io/
+ * See: https://github.com/facebookincubator/create-react-app/issues/1765
+ */
 
-import App from 'app/App'
-import Home from 'containers/Home';
-import About from 'containers/About';
-import Contact from 'containers/Contact';
-import PageNotFound from './PageNotFound';
-
-export default function Routes() {
-    return (
-        <HashRouter history={history}>
-            <div>
-                <Route path="/" component={Home} exact />
-                <Route path="/about" component={About} />
-                <Route path="/contact" component={Contact} />
-                <Route component={PageNotFound} />
-            </div>
-        </HashRouter>
-    );
-}
+export default () => (
+    <Router history={browserHistory}>
+        <Route path={`${process.env.PUBLIC_URL}/`} component={App}>
+            <Route path='/one' />
+            <Route path='/two' />
+        </Route>
+        <Route path='*' component={Page404} />
+    </Router>
+);

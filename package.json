@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "react-cv",
   "main": "index.js",
+  "repository": "https://github.com/iamluark/iamluark.github.io.git",
   "homepage": "https://iamluark.github.io",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --devtool eval-source-map --open --mode development",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build"

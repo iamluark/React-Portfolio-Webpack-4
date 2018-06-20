@@ -1,11 +1,17 @@
+const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+    devServer: {
+        historyApiFallback: true,
+        publicPath: '/'
+    },
+    entry: './src/app/index.js',
     output: {
         path: __dirname,
-        publicPath: '',
-        filename: 'assets/js/bundle.js'
+        publicPath: '/',
+        filename: 'dist/js/bundle.js'
     },
     module: {
         rules: [
@@ -27,18 +33,24 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader"]
+                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
             }
         ]
     },
+    resolve: {
+        extensions: ['.js', '.jsx', '.scss', '.json'],
+        modules: ['node_modules'],
+        alias: {
+            views: path.resolve(__dirname, 'src/views/')
+        }
+    },
     plugins: [
         new HtmlWebPackPlugin({
-            template: "./src/index.html",
-            filename: "./index.html"
+            template: "./src/app/index.html"
         }),
         new MiniCssExtractPlugin({
-            filename: "assets/css/[name].css",
-            chunkFilename: "assets/css/[id].css"
+            filename: "dist/css/[name].css",
+            chunkFilename: "dist/css/[id].css"
         })
     ]
 };

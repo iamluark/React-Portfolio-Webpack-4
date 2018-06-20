@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router';
+import { Router, Route, Switch, hashHistory } from 'react-router';
 import { HashRouter } from 'react-router-dom';
 
 import App from 'app/App'
@@ -10,7 +10,7 @@ import PageNotFound from './PageNotFound';
 
 export default function Routes() {
     return (
-        <HashRouter>
+        <HashRouter history={hashHistory}>
             <Switch>
                 <Route path="/" component={Home} exact />
                 <Route path="/about" component={About} />

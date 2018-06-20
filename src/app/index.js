@@ -8,8 +8,6 @@ import Routes from "./routes/routes";
 //var hist = createBrowserHistory();
 
 ReactDOM.render(
-    <Router>
-        <Routes />
-    </Router>,
+    <Routes />,
     document.getElementById("root")
 );

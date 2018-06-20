@@ -32,16 +32,18 @@ module.exports = {
                 ]
             },
             {
-                test: /\.css$/,
+                test: /\.(sass|css)$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
             }
         ]
     },
     resolve: {
         extensions: ['.js', '.jsx', '.scss', '.json'],
-        modules: ['node_modules'],
+        modules: ['node_modules', 'src'],
         alias: {
-            views: path.resolve(__dirname, 'src/views/')
+            containers: path.resolve(__dirname, 'src/components/containers'),
+            img: path.resolve(__dirname, 'src/assets/img'),
+            app: path.resolve(__dirname, 'src/app')
         }
     },
     plugins: [

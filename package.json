@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "react-cv",
   "main": "index.js",
-  "repository": "https://github.com/iamluark/iamluark.github.io.git",
   "homepage": "https://iamluark.github.io",
   "scripts": {
     "start": "webpack-dev-server --devtool eval-source-map --open --mode development",

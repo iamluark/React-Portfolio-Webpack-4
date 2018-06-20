@@ -1,5 +1,4 @@
 import React from 'react';
-import { browserHistory } from 'react-router';
 
 const PageNotFound = () => (
     <div className="PageNotFound">

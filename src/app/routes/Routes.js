@@ -3,8 +3,8 @@
  */
 import React from 'react';
 import { browserHistory, Route, Router } from 'react-router';
-import App from './App';
-import { Page404 } from './pages';
+import App from 'app/App';
+import { PageNotFound } from './routes';
 
 /**
  * Utilize process.env.PUBLIC_URL that is exposed by create-react-app internally:
@@ -20,6 +20,6 @@ export default () => (
             <Route path='/one' />
             <Route path='/two' />
         </Route>
-        <Route path='*' component={Page404} />
+        <Route path='*' component={PageNotFound} />
     </Router>
 );

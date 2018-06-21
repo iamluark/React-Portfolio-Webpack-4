@@ -1,2 +1,2 @@
-# iamluark.github.io
-My React Portfolio Page: http://iamluark.github.io
+# Clark Dwain Luna
+Visit my react portfolio page here: http://iamluark.com

@@ -41,14 +41,17 @@ module.exports = {
         extensions: ['.js', '.jsx', '.scss', '.json'],
         modules: ['node_modules', 'src'],
         alias: {
-            containers: path.resolve(__dirname, 'src/components/containers'),
-            img: path.resolve(__dirname, 'src/assets/img'),
-            app: path.resolve(__dirname, 'src/app')
+            components: path.resolve(__dirname, 'src/components'),
+            containers: path.resolve(__dirname, 'src/containers'),
+            img: path.resolve(__dirname, 'src/app/assets/img'),
+            app: path.resolve(__dirname, 'src/app'),
+            styles: path.resolve(__dirname, 'src/assets/styles')
         }
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: "./src/app/index.html"
+            inject: true,
+            template: "./public/index.html"
         }),
         new MiniCssExtractPlugin({
             filename: "dist/css/[name].css",

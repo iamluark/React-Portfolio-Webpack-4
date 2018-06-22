@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { HashRouter } from 'react-router-dom';
 
-class App extends Component {
+import Router from './routes/Routes';
+
+class App extends React.Component {
     render() {
         return (
-            <div>
-                {this.props.children}
-            </div>
+            <HashRouter>
+                <Router />
+            </HashRouter>
         );
     }
 }

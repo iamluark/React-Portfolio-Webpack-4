@@ -45,7 +45,7 @@ module.exports = {
             containers: path.resolve(__dirname, 'src/containers'),
             img: path.resolve(__dirname, 'src/app/assets/img'),
             app: path.resolve(__dirname, 'src/app'),
-            styles: path.resolve(__dirname, 'src/assets/styles')
+            scss: path.resolve(__dirname, 'src/assets/scss')
         }
     },
     plugins: [

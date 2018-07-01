@@ -4,9 +4,11 @@ import { withStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
 
-import Card from '@material-ui/core/Card';
-
 import homePageStyle from 'assets/jss/containers/homePage.jsx';
+
+// Components - Home
+import Sidebar from 'components/Sidebar/Sidebar.jsx';
+import Content from 'components/Content/Content.jsx';
 
 class Home extends React.Component {
     render() {
@@ -14,15 +16,22 @@ class Home extends React.Component {
         return (
             <div className={classes.container}>
                 <Grid container spacing={40}>
-                    <Grid item sm={3}>
-                        <Card>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed quisquam eum dolor consequatur facilis id voluptatum. Adipisci laboriosam odit consequatur nisi maxime corrupti repudiandae provident itaque. Vel iste ipsam consequuntur excepturi provident temporibus! Iusto, illum molestiae ab delectus accusamus laboriosam, quae veritatis earum animi numquam illo praesentium eveniet rerum quidem provident eos? Optio beatae delectus incidunt, eveniet enim ab adipisci hic nisi illo, nam molestiae consectetur velit, quibusdam maiores doloribus nobis neque rem maxime exercitationem iste assumenda vitae. Quod facere incidunt impedit similique nobis rem perferendis ipsum saepe. Dignissimos reprehenderit vero tempore placeat molestiae corporis quos doloribus expedita fuga!</p>
-                        </Card>
+                    <Grid item sm={4}>
+                        <Sidebar />
                     </Grid>
-                    <Grid item sm={9}>
-                        <Card>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique, aspernatur sed culpa veniam distinctio quod delectus accusantium id eaque reiciendis nostrum nesciunt voluptates beatae ducimus consequatur assumenda sequi ut!Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed quisquam eum dolor consequatur facilis id voluptatum. Adipisci laboriosam odit consequatur nisi maxime corrupti repudiandae provident itaque. Vel iste ipsam consequuntur excepturi provident temporibus! Iusto, illum molestiae ab delectus accusamus laboriosam, quae veritatis earum animi numquam illo praesentium eveniet rerum quidem provident eos? Optio beatae delectus incidunt, eveniet enim ab adipisci hic nisi illo, nam molestiae consectetur velit, quibusdam maiores doloribus nobis neque rem maxime exercitationem iste assumenda vitae. Quod facere incidunt impedit similique nobis rem perferendis ipsum saepe. Dignissimos reprehenderit vero tempore placeat molestiae corporis quos doloribus expedita fuga!Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed quisquam eum dolor consequatur facilis id voluptatum. Adipisci laboriosam odit consequatur nisi maxime corrupti repudiandae provident itaque. Vel iste ipsam consequuntur excepturi provident temporibus! Iusto, illum molestiae ab delectus accusamus laboriosam, quae veritatis earum animi numquam illo praesentium eveniet rerum quidem provident eos? Optio beatae delectus incidunt, eveniet enim ab adipisci hic nisi illo, nam molestiae consectetur velit, quibusdam maiores doloribus nobis neque rem maxime exercitationem iste assumenda vitae. Quod facere incidunt impedit similique nobis rem perferendis ipsum saepe. Dignissimos reprehenderit vero tempore placeat molestiae corporis quos doloribus expedita fuga!Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed quisquam eum dolor consequatur facilis id voluptatum. Adipisci laboriosam odit consequatur nisi maxime corrupti repudiandae provident itaque. Vel iste ipsam consequuntur excepturi provident temporibus! Iusto, illum molestiae ab delectus accusamus laboriosam, quae veritatis earum animi numquam illo praesentium eveniet rerum quidem provident eos? Optio beatae delectus incidunt, eveniet enim ab adipisci hic nisi illo, nam molestiae consectetur velit, quibusdam maiores doloribus nobis neque rem maxime exercitationem iste assumenda vitae. Quod facere incidunt impedit similique nobis rem perferendis ipsum saepe. Dignissimos reprehenderit vero tempore placeat molestiae corporis quos doloribus expedita fuga!Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed quisquam eum dolor consequatur facilis id voluptatum. Adipisci laboriosam odit consequatur nisi maxime corrupti repudiandae provident itaque. Vel iste ipsam consequuntur excepturi provident temporibus! Iusto, illum molestiae ab delectus accusamus laboriosam, quae veritatis earum animi numquam illo praesentium eveniet rerum quidem provident eos? Optio beatae delectus incidunt, eveniet enim ab adipisci hic nisi illo, nam molestiae consectetur velit, quibusdam maiores doloribus nobis neque rem maxime exercitationem iste assumenda vitae. Quod facere incidunt impedit similique nobis rem perferendis ipsum saepe. Dignissimos reprehenderit vero tempore placeat molestiae corporis quos doloribus expedita fuga!</p>
-                        </Card>
+                    <Grid item sm={8}>
+                        <Grid container spacing={16}>
+                            <Grid item>
+                                <Content>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum dolores maiores ipsa a molestias, odit incidunt amet aut omnis? Suscipit, facere libero id mollitia explicabo recusandae. Modi error pariatur eveniet fuga vitae, natus suscipit, molestiae, perspiciatis quas neque commodi atque. Quidem vitae placeat numquam aspernatur suscipit cumque aliquam neque deserunt recusandae natus praesentium aut similique, consequatur vel quod tempore asperiores ducimus velit illo? Magnam atque quae illum esse eius accusantium earum quo optio. Debitis aliquid laudantium culpa, beatae quis maiores quisquam non placeat laboriosam. Officia delectus quaerat inventore molestiae architecto autem repellendus qui illum fugiat, eius harum. Doloribus, commodi!</p>
+                                </Content>
+                            </Grid>
+                            <Grid item>
+                                <Content>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero eligendi ipsum nulla eveniet facilis amet quisquam quibusdam accusamus id blanditiis, laborum doloribus nostrum. Consectetur laborum ex distinctio incidunt cum sequi porro aspernatur, est quas aliquam sint repellat ea! Obcaecati molestias quasi, fugiat nemo tempora unde maxime perferendis quo voluptate.</p>
+                                </Content>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </div>
